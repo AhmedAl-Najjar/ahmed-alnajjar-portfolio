@@ -57,13 +57,15 @@ collections:
                 widget: list
                 label_singular: صورة
                 collapsed: false
-                hint: "اضغط زر إضافة صورة، ثم اختر Upload لرفع الصورة من جهازك. كررها لكل صورة تريد إضافتها."
+                hint: "اضغط إضافة صورة ثم Upload. بعد اختيار الملف يجب أن تظهر المعاينة فورًا."
                 field:
                   label: "الصورة"
                   name: image
                   widget: image
                   choose_url: false
                   allow_multiple: false
+                  media_folder: "/public/uploads"
+                  public_folder: "/uploads"
 
           - { label: "② الاسم", name: name, widget: string }
           - { label: "③ المسمى الوظيفي", name: role, widget: string }
