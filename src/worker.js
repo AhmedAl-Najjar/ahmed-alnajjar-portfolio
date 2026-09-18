@@ -27,7 +27,7 @@ async function handleAuth(url, env) {
   const provider = url.searchParams.get('provider');
   if (provider && provider !== 'github') return new Response('Invalid provider', { status: 400 });
 
-  const callback = `${url.origin}/callback?provider=github`;
+  const callback = `${url.origin}/callback`;
   const params = new URLSearchParams({
     response_type: 'code',
     client_id: env.GITHUB_OAUTH_ID,
@@ -44,7 +44,7 @@ async function handleCallback(url, env) {
   const code = url.searchParams.get('code');
   if (!code) return new Response('Missing code', { status: 400 });
 
-  const callback = `${url.origin}/callback?provider=github`;
+  const callback = `${url.origin}/callback`;
   const tokenResponse = await fetch('https://github.com/login/oauth/access_token', {
     method: 'POST',
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
