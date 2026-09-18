@@ -1,1 +1,101 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Ahmed Al-najjar — Edit Portfolio</title></head><body><script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script></body></html>
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Ahmed Al-Najjar — Portfolio Manager</title>
+  <style>
+    html,body{background:#f5f5f5}
+    body:before{
+      content:"نصيحة: افتح «المشاريع والصور» لإضافة الصور — المعاينة على اليمين تتحدث فورًا أثناء التعديل";
+      position:fixed;left:50%;bottom:16px;transform:translateX(-50%);
+      z-index:9999;background:#171717;color:#fff;padding:10px 16px;border-radius:999px;
+      font:13px Arial,sans-serif;box-shadow:0 6px 24px #0003;pointer-events:none;
+      max-width:calc(100vw - 32px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis
+    }
+    @media(max-width:900px){body:before{content:"المعاينة اللحظية متاحة من زر Preview داخل المحرر"}}
+  </style>
+</head>
+<body>
+<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script>
+  CMS.registerPreviewStyle("/admin/preview.css");
+
+  var PortfolioPreview = createClass({
+    render: function() {
+      var entry = this.props.entry;
+      var getAsset = this.props.getAsset;
+      var val = function(name, fallback) {
+        var v = entry.getIn(['data', name]);
+        return v === undefined || v === null || v === '' ? (fallback || '') : v;
+      };
+      var services = val('services') && val('services').toJS ? val('services').toJS() : [];
+      var projects = val('projects') && val('projects').toJS ? val('projects').toJS() : [];
+      var stats = val('stats') && val('stats').toJS ? val('stats').toJS() : [];
+      var lines = function(v){ return String(v || '').split('\n').filter(Boolean); };
+
+      return h('div',{className:'pv'},
+        h('header',{className:'pv-nav'},
+          h('strong',{},'AN®'),
+          h('span',{},'LIVE PORTFOLIO PREVIEW')
+        ),
+        h('section',{className:'pv-hero'},
+          h('small',{},val('role','SENIOR GRAPHIC DESIGNER')),
+          h('h1',{},val('headline','Turning Ideas Into Powerful Visual Experiences.')),
+          h('p',{},val('intro','Start editing on the left — this preview updates instantly.'))
+        ),
+        h('section',{className:'pv-about'},
+          h('div',{},
+            h('small',{},'ABOUT / PROFILE'),
+            h('h2',{},val('aboutTitle','Designing Beyond the Visual'))
+          ),
+          h('div',{},
+            lines(val('about')).slice(0,4).map(function(p,i){return h('p',{key:i},p)}),
+            h('div',{className:'pv-stats'},
+              stats.map(function(s,i){return h('div',{className:'pv-stat',key:i},h('b',{},s.value||''),h('span',{},s.label||''))})
+            )
+          )
+        ),
+        h('section',{className:'pv-section'},
+          h('small',{},'WHAT I BRING TO A PROJECT'),
+          h('h2',{},'Creative thinking. Real-world execution.'),
+          h('div',{className:'pv-services'},
+            services.map(function(s,i){return h('article',{key:i},h('em',{},String(i+1).padStart(2,'0')),h('h3',{},s.title||''),h('p',{},s.description||''))})
+          )
+        ),
+        h('section',{className:'pv-section'},
+          h('small',{},'SELECTED WORK'),
+          h('h2',{},'Projects & Images'),
+          h('div',{className:'pv-projects'},
+            projects.map(function(p,i){
+              var imgs = Array.isArray(p.images) ? p.images : [];
+              return h('article',{className:'pv-project',key:i},
+                h('div',{className:'pv-project-copy'},
+                  h('span',{},p.category||'PROJECT'),
+                  h('h3',{},p.title||'Untitled Project'),
+                  h('p',{},p.description||'')
+                ),
+                h('div',{className:'pv-gallery'},
+                  imgs.slice(0,4).map(function(src,j){
+                    var asset=getAsset(src);
+                    return h('img',{key:j,src:asset?asset.toString():src,alt:p.title||'Project image'})
+                  })
+                )
+              )
+            })
+          )
+        ),
+        h('section',{className:'pv-contact'},
+          h('small',{},'HAVE A PROJECT IN MIND?'),
+          h('h2',{},val('contactHeading',"LET'S CREATE SOMETHING MEMORABLE.")),
+          h('p',{},val('contactText',''))
+        )
+      );
+    }
+  });
+
+  CMS.registerPreviewTemplate("content", PortfolioPreview);
+</script>
+</body>
+</html>
