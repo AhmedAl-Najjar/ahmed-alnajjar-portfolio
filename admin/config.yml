@@ -3,18 +3,9 @@ backend:
   repo: AhmedAl-Najjar/ahmed-alnajjar-portfolio
   branch: main
 
-media_folder: public/uploads
-public_folder: /uploads
+media_folder: "public/uploads"
+public_folder: "/uploads"
 
-media_processing:
-  enabled: true
-  format:
-    enabled: true
-    default: webp
-  quality: 85
-  strip_metadata: true
-  width: 2200
-  height: null
 locale: ar
 publish_mode: simple
 
@@ -64,8 +55,6 @@ collections:
                   widget: image
                   choose_url: false
                   allow_multiple: false
-                  media_folder: "/public/uploads"
-                  public_folder: "/uploads"
 
           - { label: "② الاسم", name: name, widget: string }
           - { label: "③ المسمى الوظيفي", name: role, widget: string }
