@@ -2,61 +2,104 @@ backend:
   name: github
   repo: AhmedAl-Najjar/ahmed-alnajjar-portfolio
   branch: main
+
 media_folder: public/uploads
 public_folder: /uploads
-locale: en
+locale: ar
 publish_mode: simple
+
 collections:
   - name: portfolio
-    label: Portfolio
+    label: البورتفوليو
     files:
       - name: content
-        label: Portfolio content
+        label: تعديل محتوى الموقع
         file: data/content.json
         fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Role, name: role, widget: string }
-          - { label: Hero Headline, name: headline, widget: string }
-          - { label: Hero Description, name: intro, widget: text }
-          - { label: About Heading, name: aboutTitle, widget: string }
-          - { label: About, name: about, widget: text }
-          - { label: Skills, name: skills, widget: text, hint: One skill per line }
-          - label: Services
-            name: services
-            widget: list
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Description, name: description, widget: text }
-          - label: Process
-            name: process
-            widget: list
-            fields:
-              - { label: Number, name: number, widget: string }
-              - { label: Title, name: title, widget: string }
-              - { label: Description, name: description, widget: text }
-          - label: Stats
-            name: stats
-            widget: list
-            fields:
-              - { label: Value, name: value, widget: string }
-              - { label: Label, name: label, widget: string }
-          - { label: Expertise, name: expertise, widget: text, hint: One row per line }
-          - { label: Software, name: software, widget: text, hint: One tool per line }
-          - { label: Contact Heading, name: contactHeading, widget: string }
-          - { label: Contact Text, name: contactText, widget: text }
-          - { label: Email, name: email, widget: string, required: false }
-          - { label: Phone, name: phone, widget: string, required: false }
-          - { label: Instagram URL, name: instagram, widget: string, required: false }
-          - { label: Behance URL, name: behance, widget: string, required: false }
-          - label: Projects
+
+          - label: "① المشاريع والصور"
             name: projects
             widget: list
+            label_singular: مشروع
             summary: "{{title}} — {{category}}"
+            collapsed: true
+            minimize_collapsed: true
+            add_to_top: true
+            hint: "هنا تضيف مشاريعك وصورها. افتح المشروع المطلوب ثم انزل إلى «صور المشروع»."
             fields:
-              - { label: ID, name: id, widget: string }
-              - { label: Title, name: title, widget: string }
-              - { label: Category, name: category, widget: select, options: [2D DESIGN, 3D DESIGN, SOCIAL MEDIA, EVENTS] }
-              - { label: Description, name: description, widget: text }
-              - { label: Heading color, name: color, widget: color }
-              - { label: Demo project, name: demo, widget: boolean, default: false }
-              - { label: Images, name: images, widget: list, field: { label: Image, name: image, widget: image } }
+              - { label: "معرّف المشروع", name: id, widget: hidden, default: "project" }
+              - { label: "اسم المشروع", name: title, widget: string, hint: "مثال: Riyadh Holding Annual Event" }
+              - label: "نوع المشروع"
+                name: category
+                widget: select
+                options:
+                  - { label: "تصميم 2D", value: "2D DESIGN" }
+                  - { label: "تصميم 3D", value: "3D DESIGN" }
+                  - { label: "سوشيال ميديا", value: "SOCIAL MEDIA" }
+                  - { label: "فعاليات", value: "EVENTS" }
+              - { label: "وصف المشروع", name: description, widget: text, hint: "اكتب وصفًا مختصرًا للمشروع ودورك فيه." }
+              - { label: "لون عنوان المشروع", name: color, widget: color, default: "#a276fa" }
+              - { label: "مشروع تجريبي؟", name: demo, widget: boolean, default: false, hint: "خليه مقفول للمشاريع الحقيقية." }
+              - label: "صور المشروع"
+                name: images
+                widget: list
+                label_singular: صورة
+                collapsed: false
+                hint: "اضغط زر إضافة صورة، ثم اختر Upload لرفع الصورة من جهازك. كررها لكل صورة تريد إضافتها."
+                field:
+                  label: "الصورة"
+                  name: image
+                  widget: image
+                  choose_url: false
+                  allow_multiple: false
+
+          - { label: "② الاسم", name: name, widget: string }
+          - { label: "③ المسمى الوظيفي", name: role, widget: string }
+          - { label: "④ العنوان الرئيسي", name: headline, widget: string }
+          - { label: "⑤ وصف الواجهة الرئيسية", name: intro, widget: text }
+          - { label: "⑥ عنوان About", name: aboutTitle, widget: string }
+          - { label: "⑦ نبذة عني", name: about, widget: text }
+          - { label: "⑧ المهارات", name: skills, widget: text, hint: "مهارة واحدة في كل سطر." }
+
+          - label: "⑨ الخدمات"
+            name: services
+            widget: list
+            label_singular: خدمة
+            summary: "{{title}}"
+            collapsed: true
+            minimize_collapsed: true
+            fields:
+              - { label: "اسم الخدمة", name: title, widget: string }
+              - { label: "وصف الخدمة", name: description, widget: text }
+
+          - label: "⑩ طريقة العمل"
+            name: process
+            widget: list
+            label_singular: خطوة
+            summary: "{{number}} — {{title}}"
+            collapsed: true
+            minimize_collapsed: true
+            fields:
+              - { label: "رقم الخطوة", name: number, widget: string }
+              - { label: "عنوان الخطوة", name: title, widget: string }
+              - { label: "الوصف", name: description, widget: text }
+
+          - label: "⑪ الإحصائيات"
+            name: stats
+            widget: list
+            label_singular: إحصائية
+            summary: "{{value}} — {{label}}"
+            collapsed: true
+            minimize_collapsed: true
+            fields:
+              - { label: "القيمة", name: value, widget: string }
+              - { label: "الوصف", name: label, widget: string }
+
+          - { label: "⑫ التخصصات", name: expertise, widget: text, hint: "سطر واحد لكل مجموعة تخصصات." }
+          - { label: "⑬ البرامج", name: software, widget: text, hint: "برنامج واحد في كل سطر." }
+          - { label: "⑭ عنوان التواصل", name: contactHeading, widget: string }
+          - { label: "⑮ نص التواصل", name: contactText, widget: text }
+          - { label: "البريد الإلكتروني", name: email, widget: string, required: false }
+          - { label: "رقم الهاتف", name: phone, widget: string, required: false }
+          - { label: "Instagram", name: instagram, widget: string, required: false }
+          - { label: "Behance", name: behance, widget: string, required: false }
