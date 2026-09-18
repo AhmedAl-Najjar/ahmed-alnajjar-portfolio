@@ -79,7 +79,13 @@
                 h('div',{className:'pv-gallery'},
                   imgs.slice(0,4).map(function(src,j){
                     var asset=getAsset(src);
-                    return h('img',{key:j,src:asset?asset.toString():src,alt:p.title||'Project image'})
+                    var resolved=src;
+                    if(asset){
+                      if(typeof asset==='string') resolved=asset;
+                      else if(asset.url) resolved=asset.url;
+                      else if(asset.toString) resolved=asset.toString();
+                    }
+                    return h('img',{key:j,src:resolved,alt:p.title||'Project image'})
                   })
                 )
               )
