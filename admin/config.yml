@@ -16,9 +16,34 @@ collections:
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Role, name: role, widget: string }
-          - { label: Intro, name: intro, widget: text }
+          - { label: Hero Headline, name: headline, widget: string }
+          - { label: Hero Description, name: intro, widget: text }
+          - { label: About Heading, name: aboutTitle, widget: string }
           - { label: About, name: about, widget: text }
           - { label: Skills, name: skills, widget: text, hint: One skill per line }
+          - label: Services
+            name: services
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Process
+            name: process
+            widget: list
+            fields:
+              - { label: Number, name: number, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Stats
+            name: stats
+            widget: list
+            fields:
+              - { label: Value, name: value, widget: string }
+              - { label: Label, name: label, widget: string }
+          - { label: Expertise, name: expertise, widget: text, hint: One row per line }
+          - { label: Software, name: software, widget: text, hint: One tool per line }
+          - { label: Contact Heading, name: contactHeading, widget: string }
+          - { label: Contact Text, name: contactText, widget: text }
           - { label: Email, name: email, widget: string, required: false }
           - { label: Phone, name: phone, widget: string, required: false }
           - { label: Instagram URL, name: instagram, widget: string, required: false }
