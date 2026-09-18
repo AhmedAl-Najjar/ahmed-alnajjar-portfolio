@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import {defaults} from '../src/content.mjs';
 fs.mkdirSync('dist',{recursive:true});
-for (const file of ['public.html','style.css']) fs.copyFileSync('src/'+file,'dist/'+file);
+for (const file of ['public.html','style.css']) fs.copyFileSync('src/'+file,'dist/'+(file==='public.html'?'index.html':file));
 let js=fs.readFileSync('src/public.js','utf8');
 js=js.replace("const r=await fetch('/api/content');if(!r.ok)throw Error();const d=await r.json();", `const fallback=${JSON.stringify(defaults)};const r=await fetch('/api/content');const d=r.ok?await r.json():fallback;`);
 fs.writeFileSync('dist/public.js',js);
