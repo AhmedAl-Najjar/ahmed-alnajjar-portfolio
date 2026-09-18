@@ -1,41 +1,50 @@
 {
-  "name": "AHMED AL-NAJJAR",
-  "role": "SENIOR GRAPHIC DESIGNER & 3D EVENT EXPERIENCE DESIGNER",
-  "headline": "TURNING IDEAS INTO POWERFUL VISUAL EXPERIENCES.",
-  "intro": "I create high-impact visual identities, event experiences, and realistic 3D concepts that connect creativity with real-world execution. With 8+ years of experience across branding, events, exhibitions, marketing, and visual communication, I transform ideas into clear, memorable, and production-ready experiences — from the first concept to final implementation.",
-  "aboutTitle": "DESIGNING BEYOND THE VISUAL",
-  "about": "I’m Ahmed Al-Najjar, a multidisciplinary Senior Graphic Designer and 3D Event Experience Designer with more than 8 years of experience in visual communication, branding, events, exhibitions, marketing campaigns, and production design.\n\nMy approach goes beyond creating something that simply looks good. I focus on how a design works in the real world — how the brand interacts with the environment, how people experience the space, how materials behave, how elements are produced, and how every detail contributes to one consistent visual experience.\n\nA major part of my work focuses on events and branded environments in Saudi Arabia, where I develop concepts for corporate events, activations, exhibitions, branded installations, stages, booths, signage, guest experiences, and event touchpoints.\n\nI combine graphic design, spatial thinking, and realistic 3D visualization to bridge the gap between creative ideas and physical execution. From the initial brief to final production files, my goal is to create work that is visually strong, strategically clear, technically practical, and ready to become reality.",
   "skills": "Creative Direction\nEvent & Experience Design\n3D Visualization\nBrand Identity & Visual Systems\nSpatial Branding\nCampaign & Marketing Design\nPrint & Production Design",
-  "services": [
-    {"title":"CREATIVE DIRECTION","description":"Developing strong visual directions that connect the brand, concept, audience, and overall experience."},
-    {"title":"EVENT & EXPERIENCE DESIGN","description":"Creating complete visual experiences for corporate events, exhibitions, activations, stages, booths, and branded environments."},
-    {"title":"3D VISUALIZATION","description":"Transforming concepts into realistic 3D scenes that clearly communicate the final experience before production."},
-    {"title":"BRAND IDENTITY & VISUAL SYSTEMS","description":"Building and extending brand identities across digital, print, environmental graphics, events, and physical applications."},
-    {"title":"SPATIAL BRANDING","description":"Integrating brand identity into real environments through signage, walls, structures, installations, furniture, stages, and guest touchpoints."},
-    {"title":"PRINT & PRODUCTION DESIGN","description":"Preparing accurate, production-ready artwork for large-format printing, signage, event branding, and physical installations."}
-  ],
+  "contactHeading": "LET'S CREATE SOMETHING MEMORABLE.",
+  "software": "Adobe Photoshop\nAdobe Illustrator\nAdobe InDesign\nBlender\nCorelDRAW\nCanva\nPowerPoint",
+  "name": "AHMED AL-NAJJAR",
+  "aboutTitle": "DESIGNING BEYOND THE VISUAL",
+  "intro": "I create high-impact visual identities, event experiences, and realistic 3D concepts that connect creativity with real-world execution. With 8+ years of experience across branding, events, exhibitions, marketing, and visual communication, I transform ideas into clear, memorable, and production-ready experiences — from the first concept to final implementation.",
+  "contactText": "Whether you’re planning an event, developing a brand experience, creating a campaign, or looking for realistic 3D visualization, I’d be happy to discuss how we can bring the idea to life.",
+  "about": "I’m Ahmed Al-Najjar, a multidisciplinary Senior Graphic Designer and 3D Event Experience Designer with more than 8 years of experience in visual communication, branding, events, exhibitions, marketing campaigns, and production design.\n\nMy approach goes beyond creating something that simply looks good. I focus on how a design works in the real world — how the brand interacts with the environment, how people experience the space, how materials behave, how elements are produced, and how every detail contributes to one consistent visual experience.\n\nA major part of my work focuses on events and branded environments in Saudi Arabia, where I develop concepts for corporate events, activations, exhibitions, branded installations, stages, booths, signage, guest experiences, and event touchpoints.\n\nI combine graphic design, spatial thinking, and realistic 3D visualization to bridge the gap between creative ideas and physical execution. From the initial brief to final production files, my goal is to create work that is visually strong, strategically clear, technically practical, and ready to become reality.",
+  "phone": "",
   "process": [
-    {"number":"01","title":"UNDERSTAND","description":"Understanding the objective, audience, brand identity, physical environment, production requirements, and desired experience."},
-    {"number":"02","title":"DEFINE THE DIRECTION","description":"Translating the brief into a clear creative direction built around visual references, colors, materials, layout, storytelling, and spatial concepts."},
-    {"number":"03","title":"DESIGN THE EXPERIENCE","description":"Developing the concept across all relevant touchpoints — from graphics and branding to spaces, installations, signage, and environmental elements."},
-    {"number":"04","title":"VISUALIZE","description":"Creating realistic 3D scenes and mockups to communicate scale, materials, lighting, placement, proportions, and atmosphere."},
-    {"number":"05","title":"REFINE","description":"Reviewing every element for visual consistency, branding accuracy, production feasibility, proportions, materials, and implementation details."},
-    {"number":"06","title":"PREPARE FOR PRODUCTION","description":"Transforming final designs into clear, accurate, production-ready files that help execution teams reproduce the concept correctly."}
-  ],
-  "stats": [
-    {"value":"8+","label":"YEARS OF EXPERIENCE"},
-    {"value":"100+","label":"CREATIVE PROJECTS"},
-    {"value":"SAUDI ARABIA & GCC","label":"PROJECT EXPERIENCE"},
-    {"value":"2D + 3D","label":"DESIGN & EXECUTION THINKING"}
+    {
+      "number": "01",
+      "title": "UNDERSTAND",
+      "description": "Understanding the objective, audience, brand identity, physical environment, production requirements, and desired experience."
+    },
+    {
+      "number": "02",
+      "title": "DEFINE THE DIRECTION",
+      "description": "Translating the brief into a clear creative direction built around visual references, colors, materials, layout, storytelling, and spatial concepts."
+    },
+    {
+      "number": "03",
+      "title": "DESIGN THE EXPERIENCE",
+      "description": "Developing the concept across all relevant touchpoints — from graphics and branding to spaces, installations, signage, and environmental elements."
+    },
+    {
+      "number": "04",
+      "title": "VISUALIZE",
+      "description": "Creating realistic 3D scenes and mockups to communicate scale, materials, lighting, placement, proportions, and atmosphere."
+    },
+    {
+      "number": "05",
+      "title": "REFINE",
+      "description": "Reviewing every element for visual consistency, branding accuracy, production feasibility, proportions, materials, and implementation details."
+    },
+    {
+      "number": "06",
+      "title": "PREPARE FOR PRODUCTION",
+      "description": "Transforming final designs into clear, accurate, production-ready files that help execution teams reproduce the concept correctly."
+    }
   ],
   "expertise": "Corporate Events · Brand Activations · Exhibitions · Conferences · Experiential Spaces\n3D Visualization · Environmental Branding · Booths · Stages · Installations · Spatial Concepts\nBrand Identity · Campaigns · Social Media · Print Design · Marketing Materials\nLarge Format Printing · Signage · Final Artwork · Event Branding · Production Mockups",
-  "software": "Adobe Photoshop\nAdobe Illustrator\nAdobe InDesign\nBlender\nCorelDRAW\nCanva\nPowerPoint",
-  "contactHeading": "LET'S CREATE SOMETHING MEMORABLE.",
-  "contactText": "Whether you’re planning an event, developing a brand experience, creating a campaign, or looking for realistic 3D visualization, I’d be happy to discuss how we can bring the idea to life.",
-  "phone": "",
   "instagram": "",
+  "headline": "TURNING IDEAS INTO POWERFUL VISUAL EXPERIENCES.",
   "behance": "",
-  "email": "",
+  "role": "SENIOR GRAPHIC DESIGNER & 3D EVENT EXPERIENCE DESIGNER",
   "projects": [
     {
       "id": "p1",
@@ -44,7 +53,9 @@
       "description": "A space for bold compositions, visual identities and graphic experiments.",
       "color": "#a77aff",
       "demo": true,
-      "images": ["/sample.jpg"]
+      "images": [
+        "/uploads/chatgpt-image-sep-18-2026-10_17_36-pm.webp"
+      ]
     },
     {
       "id": "p2",
@@ -53,7 +64,11 @@
       "description": "Form, material and light. A space for three-dimensional visual work.",
       "color": "#9479ff",
       "demo": true,
-      "images": ["/sample.jpg","/sample.jpg","/sample.jpg"]
+      "images": [
+        "/sample.jpg",
+        "/sample.jpg",
+        "/sample.jpg"
+      ]
     },
     {
       "id": "p3",
@@ -62,7 +77,14 @@
       "description": "A collection of campaign visuals and social media designs.",
       "color": "#eddd29",
       "demo": true,
-      "images": ["/sample.jpg","/sample.jpg","/sample.jpg","/sample.jpg","/sample.jpg","/sample.jpg"]
+      "images": [
+        "/sample.jpg",
+        "/sample.jpg",
+        "/sample.jpg",
+        "/sample.jpg",
+        "/sample.jpg",
+        "/sample.jpg"
+      ]
     },
     {
       "id": "p4",
@@ -71,7 +93,55 @@
       "description": "A space for event identities, stages and immersive brand experiences.",
       "color": "#ff7747",
       "demo": true,
-      "images": ["/sample.jpg","/sample.jpg"]
+      "images": [
+        "/sample.jpg",
+        "/sample.jpg"
+      ]
+    }
+  ],
+  "email": "",
+  "services": [
+    {
+      "title": "CREATIVE DIRECTION",
+      "description": "Developing strong visual directions that connect the brand, concept, audience, and overall experience."
+    },
+    {
+      "title": "EVENT & EXPERIENCE DESIGN",
+      "description": "Creating complete visual experiences for corporate events, exhibitions, activations, stages, booths, and branded environments."
+    },
+    {
+      "title": "3D VISUALIZATION",
+      "description": "Transforming concepts into realistic 3D scenes that clearly communicate the final experience before production."
+    },
+    {
+      "title": "BRAND IDENTITY & VISUAL SYSTEMS",
+      "description": "Building and extending brand identities across digital, print, environmental graphics, events, and physical applications."
+    },
+    {
+      "title": "SPATIAL BRANDING",
+      "description": "Integrating brand identity into real environments through signage, walls, structures, installations, furniture, stages, and guest touchpoints."
+    },
+    {
+      "title": "PRINT & PRODUCTION DESIGN",
+      "description": "Preparing accurate, production-ready artwork for large-format printing, signage, event branding, and physical installations."
+    }
+  ],
+  "stats": [
+    {
+      "value": "8+",
+      "label": "YEARS OF EXPERIENCE"
+    },
+    {
+      "value": "100+",
+      "label": "CREATIVE PROJECTS"
+    },
+    {
+      "value": "SAUDI ARABIA & GCC",
+      "label": "PROJECT EXPERIENCE"
+    },
+    {
+      "value": "2D + 3D",
+      "label": "DESIGN & EXECUTION THINKING"
     }
   ]
 }
