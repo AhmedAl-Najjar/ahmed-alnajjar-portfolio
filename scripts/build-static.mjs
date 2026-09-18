@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import defaults from '../data/content.json' with { type: 'json' };
 fs.mkdirSync('dist',{recursive:true});
+fs.cpSync('admin','dist/admin',{recursive:true});
+if (fs.existsSync('public/uploads')) fs.cpSync('public/uploads','dist/uploads',{recursive:true});
 for (const file of ['public.html','style.css']) fs.copyFileSync('src/'+file,'dist/'+(file==='public.html'?'index.html':file));
 let js=fs.readFileSync('src/public.js','utf8');
 js=js.replace("const r=await fetch('/api/content');if(!r.ok)throw Error();const d=await r.json();", `const fallback=${JSON.stringify(defaults)};const r=await fetch('/api/content');const d=r.ok?await r.json():fallback;`);
