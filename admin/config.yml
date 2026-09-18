@@ -5,6 +5,16 @@ backend:
 
 media_folder: public/uploads
 public_folder: /uploads
+
+media_processing:
+  enabled: true
+  format:
+    enabled: true
+    default: webp
+  quality: 85
+  strip_metadata: true
+  width: 2200
+  height: null
 locale: ar
 publish_mode: simple
 
