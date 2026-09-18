@@ -80,9 +80,12 @@
                   imgs.slice(0,4).map(function(src,j){
                     var asset=getAsset(src);
                     var resolved=src;
-                    if(asset){
+                    if(typeof src==='string' && src.indexOf('/uploads/')===0){
+                      resolved='https://raw.githubusercontent.com/AhmedAl-Najjar/ahmed-alnajjar-portfolio/main/public'+src;
+                    } else if(asset){
                       if(typeof asset==='string') resolved=asset;
-                      else if(asset.url) resolved=asset.url;
+                      else if(typeof asset.url==='string') resolved=asset.url;
+                      else if(asset.url && typeof asset.url==='function') resolved=asset.url();
                       else if(asset.toString) resolved=asset.toString();
                     }
                     return h('img',{key:j,src:resolved,alt:p.title||'Project image'})
