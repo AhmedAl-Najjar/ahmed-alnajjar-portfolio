@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import {defaults} from '../src/content.mjs';
+import defaults from '../data/content.json' with { type: 'json' };
 fs.mkdirSync('dist',{recursive:true});
 for (const file of ['public.html','style.css']) fs.copyFileSync('src/'+file,'dist/'+(file==='public.html'?'index.html':file));
 let js=fs.readFileSync('src/public.js','utf8');
