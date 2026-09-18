@@ -1,0 +1,17 @@
+{
+  "name": "Ahmed Al-najjar",
+  "role": "SENIOR GRAPHIC DESIGNER",
+  "intro": "I create visual experiences across 2D, 3D, social media and events.",
+  "about": "Senior graphic designer specializing in 2D and 3D design, social media visuals and event experiences. I bring ideas to life through considered composition, striking imagery and a clear visual direction.",
+  "skills": "2D Design\n3D Design\nSocial Media Design\nEvent Design\nArt Direction",
+  "email": "",
+  "phone": "",
+  "instagram": "",
+  "behance": "",
+  "projects": [
+    {"id":"p1","title":"VISUAL EXPLORATIONS","category":"2D DESIGN","description":"A space for bold compositions, visual identities and graphic experiments.","color":"#a77aff","demo":true,"images":["/sample.jpg"]},
+    {"id":"p2","title":"BEYOND THE FLAT","category":"3D DESIGN","description":"Form, material and light. A space for three-dimensional visual work.","color":"#9479ff","demo":true,"images":["/sample.jpg","/sample.jpg","/sample.jpg"]},
+    {"id":"p3","title":"MADE TO STAND OUT","category":"SOCIAL MEDIA","description":"A collection of campaign visuals and social media designs.","color":"#eddd29","demo":true,"images":["/sample.jpg","/sample.jpg","/sample.jpg","/sample.jpg","/sample.jpg","/sample.jpg"]},
+    {"id":"p4","title":"EXPERIENCES IN SPACE","category":"EVENTS","description":"A space for event identities, stages and immersive brand experiences.","color":"#ff7747","demo":true,"images":["/sample.jpg","/sample.jpg"]}
+  ]
+}
