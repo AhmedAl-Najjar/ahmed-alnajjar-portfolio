@@ -1,0 +1,37 @@
+backend:
+  name: github
+  repo: AhmedAl-Najjar/ahmed-alnajjar-portfolio
+  branch: main
+media_folder: public/uploads
+public_folder: /uploads
+locale: en
+publish_mode: simple
+collections:
+  - name: portfolio
+    label: Portfolio
+    files:
+      - name: content
+        label: Portfolio content
+        file: data/content.json
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Role, name: role, widget: string }
+          - { label: Intro, name: intro, widget: text }
+          - { label: About, name: about, widget: text }
+          - { label: Skills, name: skills, widget: text, hint: One skill per line }
+          - { label: Email, name: email, widget: string, required: false }
+          - { label: Phone, name: phone, widget: string, required: false }
+          - { label: Instagram URL, name: instagram, widget: string, required: false }
+          - { label: Behance URL, name: behance, widget: string, required: false }
+          - label: Projects
+            name: projects
+            widget: list
+            summary: "{{title}} — {{category}}"
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Category, name: category, widget: select, options: [2D DESIGN, 3D DESIGN, SOCIAL MEDIA, EVENTS] }
+              - { label: Description, name: description, widget: text }
+              - { label: Heading color, name: color, widget: color }
+              - { label: Demo project, name: demo, widget: boolean, default: false }
+              - { label: Images, name: images, widget: list, field: { label: Image, name: image, widget: image } }
